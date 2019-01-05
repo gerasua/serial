@@ -1,0 +1,16 @@
+2019-01-05 17:40:19,962:__main__:infoSerial:El puerto inicialmente configurado está cerrado
+Traceback (most recent call last):
+  File "/Users/gerardosuarez/.conda/envs/serial_git/lib/python3.6/site-packages/serial/serialposix.py", line 265, in open
+    self.fd = os.open(self.portstr, os.O_RDWR | os.O_NOCTTY | os.O_NONBLOCK)
+OSError: [Errno 6] Device not configured: '/dev/tty'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/gerardosuarez/PycharmProjects/serial_git/serialgit.py", line 22, in infoSerial
+    timeout=1)
+  File "/Users/gerardosuarez/.conda/envs/serial_git/lib/python3.6/site-packages/serial/serialutil.py", line 240, in __init__
+    self.open()
+  File "/Users/gerardosuarez/.conda/envs/serial_git/lib/python3.6/site-packages/serial/serialposix.py", line 268, in open
+    raise SerialException(msg.errno, "could not open port {}: {}".format(self._port, msg))
+serial.serialutil.SerialException: [Errno 6] could not open port /dev/tty: [Errno 6] Device not configured: '/dev/tty'
