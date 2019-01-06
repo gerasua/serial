@@ -37,7 +37,7 @@ def infoSerial():
                     ser.close()
                     result.append(port)
                 except Exception as e:
-                    logger.exception("Error: %s" % e)
+                    logger.exception("Ports Error: %s" % e)
                     pass
             if result == []:
                 logger.exception("There are not open ports")
