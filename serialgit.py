@@ -29,7 +29,7 @@ def infoSerial():
             elif sys.platform.startswith('darwin'):
                 ports = glob.glob('/dev/tty.*')
             else:
-                raise EnvironmentError('Unsoporte Plataform')
+                raise EnvironmentError('Unsoported Plataform')
             result = []
             for port in ports:
                 try:
@@ -43,7 +43,7 @@ def infoSerial():
                 logger.exception("There are not open ports")
                 exit()
             else:
-                logger.exception("El puerto inicialmente configurado está cerrado")
+                logger.exception("The initially configured port is closed")
                 logger.debug("Open port(s): %s" % result)
                 exit()
         try:
