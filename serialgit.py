@@ -3,7 +3,7 @@ import sys
 import glob
 import logging
 
-#Loggin de errores y consola
+#Logging and console
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 formatter = logging.Formatter('%(asctime)s:%(name)s:%(funcName)s:%(message)s')
