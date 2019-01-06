@@ -52,7 +52,7 @@ def infoSerial():
                 ser_bytes = ser.readline()
                 logger.debug("%s" % ser_bytes)
             else:
-                logger.exception("Puerto Serial Cerrado")
+                logger.exception("Serial Port Closed")
         except Exception as e:
             logger.exception("Error: %s" % e)
 
